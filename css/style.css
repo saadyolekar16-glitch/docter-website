@@ -584,7 +584,27 @@ footer {
     padding: 1rem 0;
     gap: 1rem;
   }
-
+   /* Fix for Call Clinic button on mobile */
+   @media (max-width: 820px) {
+     .hero-buttons {
+       display: flex;
+       flex-direction: column;
+       gap: 12px;
+       width: 100%;
+     }
+     
+     .hero-buttons .btn {
+       width: 100%;
+       justify-content: center;
+       text-align: center;
+     }
+     
+     /* Make sure buttons are visible */
+     .btn-outline, .btn-primary, .btn-whatsapp {
+       display: flex;
+       white-space: nowrap;
+     }
+   }
   .nav-links.active {
     display: flex;
   }

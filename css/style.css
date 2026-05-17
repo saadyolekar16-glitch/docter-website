@@ -642,6 +642,21 @@ footer {
     bottom: 16px;
     right: 16px;
   }
+  
+   @media (max-width: 820px) {
+      .hero-grid {
+          flex-direction: column;
+      }
+        
+      .hero-grid > .hero-content {
+          order: 1;
+      }
+        
+      .hero-grid > .hero-image {
+          order: 2;
+          margin-top: 2rem;
+      }
+   }
 }
 
 /* Accessibility */

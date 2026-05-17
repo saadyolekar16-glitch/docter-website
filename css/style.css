@@ -565,9 +565,6 @@ footer {
 .whatsapp-float:hover {
   transform: scale(1.08);
 }
-input[type="date"] {
-  position: relative;
-}
 
 input[type="date"]:before {
   content: attr(placeholder);
@@ -580,10 +577,6 @@ input[type="date"]:valid:before {
   display: none;
 }
 
-/* For better date input visibility */
-input[type="date"] {
-  color-scheme: light;
-}
 /* Modern Date Input Styling - No design issues */
 .form-group {
   position: relative;

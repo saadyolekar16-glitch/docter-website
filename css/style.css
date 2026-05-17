@@ -628,7 +628,7 @@ footer {
     justify-content: center;
   }
 
-  /* FIX 2: All buttons visible and full width on mobile */
+  /* FIX 2: All buttons full width on mobile */
   .hero-buttons {
     flex-direction: column;
     gap: 12px;
@@ -640,6 +640,18 @@ footer {
     justify-content: center;
     padding: 14px 20px;
     font-size: 1rem;
+  }
+
+  /* FIX 3: Make Call Clinic button visible - SOLID BACKGROUND ON MOBILE */
+  .hero-buttons .btn-outline {
+    background-color: var(--primary);
+    border: none;
+    color: white !important;
+  }
+  
+  .hero-buttons .btn-outline:hover {
+    background-color: var(--primary-dark);
+    color: white;
   }
 
   /* Footer mobile */

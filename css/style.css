@@ -584,6 +584,63 @@ input[type="date"]:valid:before {
 input[type="date"] {
   color-scheme: light;
 }
+/* Modern Date Input Styling - No design issues */
+.form-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: var(--transition);
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+/* Style the date input when empty */
+input[type="date"]:invalid {
+  color: #999;
+}
+
+/* Style the date input when filled */
+input[type="date"]:valid {
+  color: var(--text-dark);
+}
+
+/* Custom placeholder for date input using label */
+.date-label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--white);
+  padding: 0 4px;
+  transition: 0.2s ease-out;
+  pointer-events: none;
+  color: #999;
+  font-size: 16px;
+}
+
+/* Hide label when date is selected or focused */
+input[type="date"]:focus + .date-label,
+input[type="date"]:valid + .date-label {
+  top: 0;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+/* Remove default calendar icon styling issues */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
 
 /* ========== MOBILE RESPONSIVE FIXES ========== */
 @media (max-width: 820px) {
@@ -596,9 +653,13 @@ input[type="date"] {
     gap: 1rem;
   }
    input[type="date"] {
-    display: block;
-    min-height: 48px;
     font-size: 16px; /* Prevents zoom on focus */
+    min-height: 48px;
+  }
+  
+  .date-label {
+    background-color: var(--white);
+    left: 16px;
   }
   
   .appointment-form input[type="date"] {

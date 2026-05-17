@@ -601,7 +601,7 @@ footer {
     padding: 0 20px;
   }
 
-  /* FIX 1: Hero image moves to second position (text first on mobile) */
+  /* Hero: Text first, Image second */
   .hero-grid {
     flex-direction: column;
   }
@@ -627,7 +627,7 @@ footer {
     justify-content: center;
   }
 
-  /* FIX 2: All buttons full width on mobile */
+  /* Hero buttons - full width */
   .hero-buttons {
     flex-direction: column;
     gap: 12px;
@@ -641,7 +641,7 @@ footer {
     font-size: 1rem;
   }
 
-  /* FIX 3: Make Call Clinic button visible - SOLID BACKGROUND ON MOBILE */
+  /* Make Call Clinic button visible on mobile */
   .hero-buttons .btn-outline {
     background-color: var(--primary);
     border: none;
@@ -653,7 +653,30 @@ footer {
     color: white;
   }
 
-  /* Footer mobile */
+  /* ===== FIX FOR CONTACT SECTION LINKS ===== */
+  /* Make phone number and links visible */
+  .contact-info a {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  .contact-info p a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  /* Contact section buttons */
+  .contact-info .btn {
+    background-color: var(--primary);
+    color: white !important;
+  }
+  
+  .contact-info .btn-whatsapp {
+    background-color: #25D366;
+    color: white !important;
+  }
+
+  /* Footer */
   .footer-content {
     flex-direction: column;
     text-align: center;
@@ -662,14 +685,6 @@ footer {
   .footer-contact p {
     justify-content: center;
   }
-}
-
-/* Accessibility */
-button:focus,
-a:focus,
-input:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
 }
 
 /* Animations */
